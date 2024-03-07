@@ -1,4 +1,3 @@
-import image from "../../img/httyd.jpg";
 import "./Home.css";
 const Home = () => {
   return (
