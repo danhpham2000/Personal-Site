@@ -1,0 +1,46 @@
+.navbar {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 30px;
+  background: #fff;
+  padding: 10px 30px;
+  align-items: center;
+}
+
+.navbar h1 {
+  grid-column: span 6;
+  line-height: 1em;
+}
+
+h1 div:first-child {
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+h1 div:last-child {
+  font-weight: 400;
+}
+
+.navbar a {
+  color: #333;
+  text-decoration: none;
+}
+
+.navbar div {
+  grid-column: span 6;
+  justify-self: end;
+}
+
+.navbar div a {
+  margin-left: 10px;
+  text-decoration: none;
+  padding: 20px 10px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.navbar div a:hover,
+.navbar div a.active {
+  background: #333;
+  color: #fff;
+}
