@@ -1,9 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+:root {
+  --color-text: #b3aeae;
+  --color-neon: #081442;
+  --primary-neon: #15f5ba;
+}
+
 body {
   margin: 0;
   font-family: "Poppins";
-  background-color: #f5f5f5;
+  background: var(--color-neon);
 }
 
 .grid {
@@ -14,7 +20,6 @@ body {
 
 header {
   padding: 20px 40px;
-  background: #fff;
   align-items: center;
 }
 header a {
@@ -24,6 +29,7 @@ header a {
 header a img {
   width: 10%;
   justify-self: end;
+  transition: all 0.2s;
 }
 
 .navbar {
@@ -33,15 +39,83 @@ header a img {
 
 .navbar a {
   text-decoration: none;
-  color: #333;
-  margin-right: 20px;
-  font-size: 24px;
+  color: var(--color-text);
+  margin-right: 18px;
+  font-size: 20px;
   padding: 10px 20px;
   border-radius: 4px;
   transition: all 0.3s ease;
+  letter-spacing: 0.5px;
 }
 
 .navbar a:hover {
-  background: #333;
-  color: #fff;
+  background: var(--primary-neon);
+  color: #333;
+}
+
+main {
+  margin: 60px auto;
+  max-width: 960px;
+}
+
+main img {
+  grid-column: span 6;
+  width: 50%;
+  justify-self: center;
+  animation: slide-in-left 1s ease;
+  transition: all 0.5s;
+  border-radius: 50%;
+  background-color: var(--primary-neon);
+}
+
+main img:hover {
+  transform: scale(1.2);
+}
+
+main .text {
+  grid-column: span 6;
+  font-size: 20px;
+  animation: slide-in-right 1s ease;
+  text-align: left;
+  color: var(--color-text);
+}
+
+@keyframes slide-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+
+  50% {
+    opacity: 0.5;
+    /* transform: translateX(-30px); */
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+
+  50% {
+    opacity: 0.5;
+    /* transform: translateX(-30px); */
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+hr {
+  width: 15%;
+  border-top: 5px dotted #8ccdbb;
+  border-bottom: 0;
 }
