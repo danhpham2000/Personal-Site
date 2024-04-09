@@ -47,11 +47,12 @@ header a:active {
   padding: 0.5rem;
   border-radius: 5px;
   transition: all 0.4s ease;
+  font-size: 40px;
 }
 
 .nav-item {
   margin-right: 3em;
-  font-size: 16px;
+  font-size: 20px;
   padding: 10px;
   transition: all 0.4s ease;
   border-radius: 5px;
@@ -61,6 +62,9 @@ header a:active {
   margin-top: 3em;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  font-size: 20px;
+  height: 70vh;
+  border-bottom: 1px solid #333;
 }
 
 .intro {
@@ -82,8 +86,22 @@ header a:active {
 }
 
 .profile img {
-  width: 250px;
+  width: 300px;
   border-radius: 5px;
   transition: all 0.4s ease;
-  box-shadow: 10px -15px 15px rgba(29, 184, 256, 1);
+  box-shadow: 10px -15px 15px rgba(20, 255, 236, 1);
+}
+
+#react {
+  animation: bounced 2s infinite;
+}
+
+@keyframes bounced {
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
